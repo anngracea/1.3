@@ -1,0 +1,461 @@
+*,
+*::before,
+*::after {
+    padding:0px;
+    margin: 0px;
+    box-sizing: inherit;
+    font-family: "TTLakes";
+}
+
+/*-----------ШРИФТЫ -----------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "TTLakes";
+    font-display: swap;
+    font-style: medium;
+    font-weight: 500;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("TTLakes"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("fonts/TTLakes-Medium.woff") format("woff");
+  }
+  @font-face {
+    font-family: "TTLakes";
+    font-display: swap;
+    font-style: bold;
+    font-weight: 700;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("TTLakes"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("fonts/TTLakes-Bold.woff") format("woff");
+  }
+  @font-face {
+    font-family: "TTLakes";
+    font-display: swap;
+    font-style: regular;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("TTLakes"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("fonts/TTLakesCondensed-Regular.woff") format("woff");
+  }
+  /*----------ШАПКА------------------------------------------------------------------------------------------------*/
+  
+.site{
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+}
+.header{
+background-color: #ffffff;
+border-bottom: 1px solid #D9FFF5;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: 16px;
+margin-right: 16px;
+}
+
+.header-nav{
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+}
+
+.header-button{
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+}
+
+.button-item {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  flex-shrink: 0;
+  margin-left: 0px;
+  margin-right: 16px;
+}
+
+ .button-item--burger{
+    background-image: url(./image/burger.svg);
+ }
+
+ .header-nav__logo{
+  background-image: url(./image/logo.svg);
+  margin-left: 16px;
+  width: 97px;
+  height: 51px;
+ }
+  
+ .header__divider--right{
+  background-image: url(./image/divider.svg);
+  margin-left: 16px;
+  margin-right: 20px;
+  width: 2px;
+  height: 32px;
+ }
+
+ .button-item--repair{
+  background-image: url(./image/repair.svg)
+ }
+
+ .button-item--checkstatus{
+  background-image: url(./image/checkstatus.svg);
+ }
+
+ .button-item:last-of-type{
+  margin-right: 0px;
+}
+
+.button-item:first-of-type{
+  margin-left: 0px;
+}
+  /*----------СКРЫТЫЕ 3 КНОПКИ------------------------------------------------------------------------------------------------*/
+  
+.button-item--call{
+  display: none;
+}
+.button-item--chat{
+  display: none;
+}
+
+.button-item--profile{
+  display: none;
+}
+
+ /*----------MAIN------------------------------------------------------------------------------------------------*/
+  /*----------СЕКЦИЯ ПОД ШАПКОЙ ЗАГОЛОВОК------------------------------------------------------------------------------------------------*/
+.main{
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  min-height: 509px;
+  background-color: #F8F8F8; 
+  overflow:hidden
+}
+
+.title{
+  min-height: 40px;
+  margin-top: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.title__h1{
+  font-family: "TTLakes";
+  margin: 0;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  position: relative;
+  font-weight: bold;
+  margin-right: auto;
+  white-space: nowrap;
+}
+.title__h1::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  width: 4px;
+  height: 40px;
+  top: 0px;
+  background: #41F6D7;
+  border-right: 2px solid #41F6D7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+ /*----------СЕКЦИЯ СКРЫТЫЕ КНОПКИ С ПОДПИСЯМИ ДЛЯ 1120px------------------------------------------------------------------------------------------------*/
+.title__button-label{
+  display: none;
+}
+.title__button-item--repair{
+  display: none;
+}
+.title__button-item--checkstatus{
+  display: none;
+}
+
+ /*----------СЕКЦИЯ ПОСЛЕ ЗАГОЛОВКА (ТЕКСТОВОЕ МЕНЮ СО СКРОЛОМ)------------------------------------------------------------------------------------------------*/
+.textmenu{
+  height: 50px;
+  min-width: 320px;
+  margin-top: 24px;
+  padding: 0px;
+}
+
+.textmenu__navigation{
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  overflow: scroll;
+  height: 40px;
+  min-width: 320px;
+  margin-right: 16px;
+  margin-left: 16px;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.textmenu__navigation::-webkit-scrollbar {
+  display: none;
+}
+.textmenu__a{
+  font-family: "TTLakes";
+  text-decoration: none;
+  color: #7E7E82;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  padding: 8px 16px 8px 16px;
+}
+
+.textmenu__a:hover {
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+
+  background-color: #ffffff;
+}
+
+
+/*----------СЕКЦИЯ С ТЕКСТОМ И КАРТИНКОЙ------------------------------------------------------------------------------------------------*/
+.content{
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  overflow-y: hidden;
+  font-family: "TTLakes";
+  color: #1b1c21;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  margin: 24px 16px 16px 26px;
+}
+
+
+.content__button{
+  white-space: nowrap;
+  min-width: 100px;
+  min-height: 24px;
+  margin-left: 10px;
+  border: none;
+  background: url(./image/expand.svg) 20px;
+  background-repeat: no-repeat;
+  padding-left: 47px;
+  padding-bottom: 0px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-family: "TTLakes";
+  font-weight: bold;
+  color: #1B1C21;
+}
+
+.image__about{
+  margin-top: 16px;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 230px;
+}
+
+
+ /*----------МЕДИАЗАПРОСЫ------------------------------------------------------------------------------------------------*/
+  
+ @media (min-width:768px) {
+  .header{
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
+    .button-item--call{
+        background-image: url(./image/call.svg);
+        display: block;
+    }
+    .button-item--chat{
+      background-image: url(./image/chat.svg);
+      display: block;
+    }
+    .button-item--profile{
+      background-image: url(./image/profile.svg);
+      margin-right: 0px;
+      display: block;
+    }
+    .header__divider--left{
+      background-image: url(./image/divider.svg);
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 2px;
+      height: 32px;
+    }
+  .header-nav__logo{
+    margin-left: 0px;
+  }
+
+  .title{
+    min-height: 40px;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-bottom: 0px;
+  }
+  .title__h1{
+    min-width: 233px;
+  }
+
+  .title__h1::before{
+    left: -24px;
+  }
+  .section{
+    display: flex;
+  }
+  .article {
+    width: 100%;
+    min-height: 280px;
+  }
+
+  .main{
+    min-width: 768px;
+    min-height: 416px;
+    margin-right: 15px;
+  }
+
+  .image {
+    width: 100%;
+    min-height: 280px;
+    margin-right: 24px;
+  }
+
+  .content{
+      width: 312px;
+      height: 160px;
+      margin-top: 32px;
+      margin-right: 48px;
+      line-height: 20px;
+  }
+  .image__about {
+    margin-top: 32px;
+
+}
+}
+
+@media (min-width:1120px) {
+    .header{
+      display: none;
+    }
+    .main{
+      min-height: 535px;
+      min-width: 1120px;
+      margin: 0 auto;      /* Это свойсто не даёт расшириться экрану видимому более 1120. Если нужно расширение более 1120 сделать--УДАЛИ СВОЙСТВО margin тут */
+    }
+    .title{
+      font-family: "TTLakes";
+      min-height: 40px;
+      margin-top: 42px;
+      margin-left: 32px;
+      margin-right: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .title__button{
+      display: flex;
+      align-self: center;
+    }
+
+    .title__button--repair {
+      display: flex;
+      align-self: center;
+      margin-right: 32px;
+    }
+
+    .title__button--checkstatus {
+      display: flex;
+      align-self: center;
+    }
+
+    .wrapper-header__button1{
+      display: flex;
+      align-self: center;
+      min-width: 205px;
+    }
+    .title__button-label[hidden] {
+      display: block;
+    }
+
+    .title__button-label{
+      margin-right: 9px;
+      margin-top: 10px;
+      font-family: 'TTLakes';
+      font-weight: bold;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1B1C21;
+      text-align: center;
+      border: none;
+    }
+    .button-item{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    border: none;
+    flex-shrink: 0;
+    margin-left: 0px;
+    margin-right: 16px;
+    }
+
+    .title__button-item--repair[hidden] {
+      display: block;
+      background-image: url(./image/repair.svg);
+    }
+
+    .title__button-item--checkstatus[hidden] {
+      display: block;
+      background-image: url(image/checkstatus.svg);
+    }
+
+    .wrapper-header__button2{
+      display: flex;
+      align-self: center;
+      min-width: 128px;
+    }
+
+    .title__h1::before {
+      left: -31px;
+  }
+
+  .textmenu__navigation {
+    min-height: 84px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    margin-left: 32px;
+    margin-right: 32px;
+    overflow: hidden;
+  }
+  .content {
+    margin-top: 57px;
+    margin-right: 36px;
+    margin-left: 32px;
+    width: 490px;
+    height: 160px;
+  }
+  .image{
+    min-height: 383px;
+    margin-right: 36px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
