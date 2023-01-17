@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="preload" href="/fonts/TTLakes-Bold.woff" as="font">
+    <link rel="preload" href="/fonts/TTLakes-Medium.woff" as="font">
+    <link rel="preload" href="/fonts/TTLakesCondensed-Regular.woff" as="font">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Сервисный центр</title>
+</head>
+<body class="site">
+    <header class="header"> <!--Это БЭМ блок--> 
+        <nav class="header-nav"><!--Это БЭМ блок-->
+            <button class="button-item button-item--burger"> </button><!--Это 1 БЭМ блок с 2 классами для стилей (общим и специфичным)-->
+            <div class="header__divider--left"></div><!--Это элемент  divider БЭМ блока header с модификатором left-->
+            <div class="header-nav__logo"></div><!--Это элемент logo БЭМ блока header-nav-->
+        </nav>
+            
+        <div class="header-button"><!-- Это БЭМ блок--> 
+            <button class="button-item button-item--call"></button> <!-- Это 1 БЭМ блок с 2 классами для стилей (общим и специфичным)-->
+            <button class="button-item button-item--chat"></button>
+            <button class="button-item button-item--profile"></button>
+            <div class="header__divider--right"></div><!--Это элемент divider БЭМ блока header с модификатором right-->
+            <button class="button-item button-item--repair"></button>
+            <button class="button-item button-item--checkstatus"></button>
+        </div>
+    </header>
+    <main class="main"> <!--Это БЭМ блок--> 
+        <div class="title"> <!--Это БЭМ блок--> 
+            <h1 class="title__h1"> <!--Это элемент h1 БЭМ блока title--> 
+                Услуги и сервисы
+            </h1>
+            <div class="title__button">
+                <div class="title__button--repair">     
+                    <label hidden="" class="title__button-label">Оставить заявку </label><!--Это элемент button-label БЭМ блока title-->
+                    <button hidden="" class="button-item title__button-item--repair"></button>
+            </div>
+                <div class="title__button--checkstatus"> 
+                    <label hidden="" class="title__button-label">Статус ремонта</label>
+                    <button hidden="" class="button-item title__button-item--checkstatus"></button>
+                </div>
+        </div>
+        </div>
+        <div class="textmenu"><!--Это БЭМ блок textmenu--> 
+            <nav class="textmenu__navigation"><!--Это элемент natigation БЭМ блока textmenu--> 
+                <a class="textmenu__a" href="#">Ремонтируемые бренды</a><!--Это элемент a БЭМ блока textmenu--> 
+                <a class="textmenu__a" href="#">Ремонтируемые устройства</a>
+                <a class="textmenu__a" href="#">Дополнительные услуги</a>
+                <a class="textmenu__a" href="#">Цены на услуги</a>
+                <a class="textmenu__a" href="#">Специальные цены</a>
+                <a class="textmenu__a" href="#">Адреса сервисных центров</a>
+                <a class="textmenu__a" href="#">Отзывы</a>
+            </nav>
+        </div>
+        <div class="section">
+            <div class="article">
+                <div class="content">
+                    <p class="content__text">
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+                        Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                    </p>
+                    <br>
+                    <p class="content__text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                        что подтверждает большое количество постоянных клиентов.Мы гордимся тем,
+                        что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                </div>
+                <button class="content__button">Читать далее</button>
+            </div>
+            <div class="image">            
+                <img class="image__about" src="image/main.png" alt="График работы компании">
+            </div>
+        </div>
+    </main>
+    </body>
+    <script src="js/script.js"></script>
+</html>
